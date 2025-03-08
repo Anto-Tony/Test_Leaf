@@ -12,7 +12,7 @@ test('Verify whether the text box is clickable', async ({ page }) => {
 test('Assign value in Text box', async ({ page }) => {
  
   await page.goto('https://leafground.com/dashboard.xhtml');  
-  await page.locator('i.pi.pi-server.layout-menuitem-icon').click();
+  await page.locator('i.pi.pi-server.layout-menuitem-icon').click(); // What will happen when the locator changes? will you change the value everywhere again and again?? 
   await page.locator('//li[@id="menuform:m_input"]').click();
   await page.locator('#j_idt88\\:name').fill('Antony Mathan');
   await page.waitForTimeout(2000)
